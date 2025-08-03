@@ -600,22 +600,20 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "PS"
-				(at -7.62 6.35 0)
+			(property "Reference" "PS2"
+				(at 0 10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "MEE1S1205SC"
-				(at 1.27 6.35 0)
+			(property "Value" "MP1584"
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_MEE1SxxxxSC_THT"
@@ -720,7 +718,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 10.16 -2.54 180)
 					(length 2.54)
 					(name "-Vout"
@@ -806,22 +804,20 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "PS"
-				(at -7.62 6.35 0)
+			(property "Reference" "PS1"
+				(at 0 10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "MEE1S1209SC"
-				(at 1.27 6.35 0)
+			(property "Value" "MP1584"
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_MEE1SxxxxSC_THT"
@@ -926,7 +922,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 10.16 -2.54 180)
 					(length 2.54)
 					(name "-Vout"
@@ -3353,8 +3349,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "A"
-				(at -19.05 35.56 0)
+			(property "Reference" "A1"
+				(at 2.1433 -34.29 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3362,8 +3358,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "RaspberryPi_Pico"
-				(at 7.62 35.56 0)
+			(property "Value" "RP Pico"
+				(at 2.1433 -36.83 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3934,7 +3930,7 @@
 					)
 					(alternate "VBUS_IN" power_in line)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(hide yes)
@@ -3953,7 +3949,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(hide yes)
@@ -3972,7 +3968,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(hide yes)
@@ -3991,7 +3987,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(hide yes)
@@ -4010,7 +4006,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(name "GND"
@@ -4029,7 +4025,7 @@
 					)
 					(alternate "GND_IN" power_in line)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(hide yes)
@@ -4048,7 +4044,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin power_in line
 					(at 0 -35.56 90)
 					(length 3.81)
 					(hide yes)
@@ -4342,7 +4338,7 @@
 					(alternate "UART0_TX" output line)
 					(alternate "USB_VBUS_DET" input line)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 22.86 -22.86 180)
 					(length 3.81)
 					(name "AGND"
@@ -5874,12 +5870,6 @@
 		(uuid "3581cbeb-2019-4209-ac7d-ceff9ca86fb6")
 	)
 	(junction
-		(at 78.74 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4cde14e2-28b4-4f12-949c-dbf9cc383854")
-	)
-	(junction
 		(at 266.7 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5988,6 +5978,12 @@
 		(uuid "ae22e366-fad4-4e42-ad54-d362b1105e80")
 	)
 	(junction
+		(at 50.8 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b30fa995-fd6d-4d84-8914-72ce367bdc1a")
+	)
+	(junction
 		(at 339.09 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6004,6 +6000,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c53b8afd-857c-4202-be39-c56e0da52b55")
+	)
+	(junction
+		(at 41.91 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c58e7fd3-ad71-47c5-82c5-13953118fe1e")
 	)
 	(junction
 		(at 60.96 187.96)
@@ -7091,6 +7093,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 44.45) (xy 82.55 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44e7e0c7-8ea4-47e8-8017-46adced4bb43")
+	)
+	(wire
+		(pts
 			(xy 86.36 219.71) (xy 88.9 219.71)
 		)
 		(stroke
@@ -7098,16 +7110,6 @@
 			(type default)
 		)
 		(uuid "45f558e2-63c0-43c6-afd2-e642c32ec479")
-	)
-	(wire
-		(pts
-			(xy 82.55 44.45) (xy 78.74 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "460ff918-c935-4e74-a4d5-c4158710be81")
 	)
 	(wire
 		(pts
@@ -7338,6 +7340,16 @@
 			(type default)
 		)
 		(uuid "53796663-2e88-4ad4-b8a3-153e9dbba092")
+	)
+	(wire
+		(pts
+			(xy 41.91 54.61) (xy 46.99 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54264db1-2a83-4ff3-91e2-a18842de5876")
 	)
 	(wire
 		(pts
@@ -8301,6 +8313,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 44.45) (xy 66.04 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bb0f6c1-87b3-4bf0-961b-0e9404b87862")
+	)
+	(wire
+		(pts
 			(xy 67.31 149.86) (xy 44.45 149.86)
 		)
 		(stroke
@@ -8468,16 +8490,6 @@
 			(type default)
 		)
 		(uuid "96390bdc-e3f2-4a61-8cc5-606fc53dbdc1")
-	)
-	(wire
-		(pts
-			(xy 53.34 44.45) (xy 66.04 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97da893b-331d-40c8-b491-bcfa71c8a2aa")
 	)
 	(wire
 		(pts
@@ -8691,16 +8703,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 44.45) (xy 66.04 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a226756d-7d48-455a-866a-2e7d042d4e11")
-	)
-	(wire
-		(pts
 			(xy 22.86 157.48) (xy 22.86 163.83)
 		)
 		(stroke
@@ -8708,6 +8710,16 @@
 			(type default)
 		)
 		(uuid "a22e97b0-266f-4bbe-9d77-7e8a2554d9ca")
+	)
+	(wire
+		(pts
+			(xy 50.8 44.45) (xy 53.34 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a32f167f-1589-4e27-9f92-ff32bec86705")
 	)
 	(wire
 		(pts
@@ -8771,7 +8783,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 54.61) (xy 46.99 54.61)
+			(xy 39.37 54.61) (xy 41.91 54.61)
 		)
 		(stroke
 			(width 0)
@@ -9851,7 +9863,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 44.45) (xy 53.34 44.45)
+			(xy 46.99 44.45) (xy 50.8 44.45)
 		)
 		(stroke
 			(width 0)
@@ -17234,7 +17246,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 78.74 44.45 0)
+		(at 50.8 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17243,7 +17255,7 @@
 		(fields_autoplaced yes)
 		(uuid "827cb0f1-6b48-4863-b46b-10079e4df35d")
 		(property "Reference" "#FLG01"
-			(at 78.74 42.545 0)
+			(at 50.8 42.545 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17252,7 +17264,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 78.74 39.37 0)
+			(at 50.8 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17260,7 +17272,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 44.45 0)
+			(at 50.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17269,7 +17281,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 44.45 0)
+			(at 50.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17278,7 +17290,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 78.74 44.45 0)
+			(at 50.8 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19154,7 +19166,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b6d2416c-2e3f-40e5-a292-84952cafa6b0")
 		(property "Reference" "J1"
 			(at 39.37 38.1 0)
@@ -19165,7 +19176,7 @@
 			)
 		)
 		(property "Value" "Barrel_Jack_MountingPin"
-			(at 39.37 40.64 0)
+			(at 29.972 41.148 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20249,6 +20260,72 @@
 			(project ""
 				(path "/f597545d-e439-405e-b3d9-45b4756804a9"
 					(reference "BZ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 41.91 54.61 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c1546cad-5c5d-4393-829e-3303eef81f53")
+		(property "Reference" "#FLG02"
+			(at 41.91 56.515 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 41.91 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 41.91 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 41.91 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2242746-0cfb-49bf-a4db-60ee627f4b89")
+		)
+		(instances
+			(project "cloc"
+				(path "/f597545d-e439-405e-b3d9-45b4756804a9"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)

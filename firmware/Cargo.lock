@@ -128,6 +128,7 @@ dependencies = [
  "embassy-sync 0.7.0",
  "embassy-time",
  "embedded-hal 1.0.0",
+ "fixed",
  "panic-probe",
  "portable-atomic",
  "static_cell",

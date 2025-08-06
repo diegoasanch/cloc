@@ -1,6 +1,7 @@
 #![no_std]
 #![no_main]
 
+use defmt::info;
 use embassy_executor::Spawner;
 use embassy_rp::gpio::{Level, Output};
 use embassy_rp::pwm::{Config, Pwm};
@@ -29,53 +30,53 @@ async fn main(_spawner: Spawner) {
     pwm_config.enable = true;
 
     let _oe_pwm = Pwm::new_output_a(p.PWM_SLICE0, p.PIN_16, pwm_config);
-    defmt::info!("PWM configured with 50% duty cycle");
+    info!("PWM configured with 50% duty cycle");
 
     let mut tpic = TPIC6B595::new(srck, rck, ser_in);
 
     // Initialize the shift register
     tpic.init().await;
-    defmt::info!("TPIC6B595 initialized");
+    info!("TPIC6B595 initialized");
 
     // Wait a moment before starting
     Timer::after(Duration::from_millis(1000)).await;
 
     loop {
-        defmt::info!("=== Starting test cycle ===");
+        info!("=== Starting test cycle ===");
 
         // Step 1: Cycle through each bit individually
-        defmt::info!("Step 1: Cycling through each bit individually");
+        info!("Step 1: Cycling through each bit individually");
         for bit in 0..8 {
             let pattern = 1 << bit;
-            defmt::info!("Setting bit {} (pattern: 0b{:08b})", bit, pattern);
+            info!("Setting bit {} (pattern: 0b{:08b})", bit, pattern);
             tpic.set_outputs(pattern).await;
             Timer::after(Duration::from_millis(1000)).await;
         }
 
         // Step 2: Turn on bits one by one until all are on
-        defmt::info!("Step 2: Turning on bits one by one");
+        info!("Step 2: Turning on bits one by one");
         for bit in 0..8 {
             let pattern = (1 << (bit + 1)) - 1; // Creates pattern like 0b00000001, 0b00000011, 0b00000111, etc.
-            defmt::info!("Adding bit {} (pattern: 0b{:08b})", bit, pattern);
+            info!("Adding bit {} (pattern: 0b{:08b})", bit, pattern);
             tpic.set_outputs(pattern).await;
             Timer::after(Duration::from_millis(1000)).await;
         }
 
         // Step 3: Turn off bits one by one until all are off
-        defmt::info!("Step 3: Turning off bits one by one");
+        info!("Step 3: Turning off bits one by one");
         for bit in (0..8).rev() {
             let pattern = (1 << bit) - 1; // Creates pattern like 0b01111111, 0b00111111, 0b00011111, etc.
-            defmt::info!("Removing bit {} (pattern: 0b{:08b})", bit, pattern);
+            info!("Removing bit {} (pattern: 0b{:08b})", bit, pattern);
             tpic.set_outputs(pattern).await;
             Timer::after(Duration::from_millis(1000)).await;
         }
 
         // Clear all outputs
-        defmt::info!("Clearing all outputs");
+        info!("Clearing all outputs");
         tpic.clear_outputs().await;
         Timer::after(Duration::from_millis(1000)).await;
 
-        defmt::info!("=== Test cycle complete, restarting in 2 seconds ===");
+        info!("=== Test cycle complete, restarting in 2 seconds ===");
         Timer::after(Duration::from_millis(2000)).await;
     }
 }
